@@ -10,6 +10,7 @@ gem 'mysql2', '>= 0.3.13', '< 0.5'
 gem 'acts_as_list', '~> 0.7.4'
 
 
+gem 'sass'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
