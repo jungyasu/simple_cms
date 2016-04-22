@@ -10,10 +10,11 @@
 <body>
 	<div id="header">
 		<h1>Simple CMS</h1>
+		<%= link_to("Go to Admin", {:controller => 'access', :action => 'index'}, :style => 'color:#fff' ) %>
 	</div>
 	<div id="main">
 		<div id="navigation">
-			<%= render(:partial => 'layouts/navigation', :locals => {:subjects => @subjects}) %>
+			<p><%= render(:partial => 'layouts/navigation', :locals => {:subjects => @subjects}) %></p>
 		</div>
 		<div id="content">
 			<!-- Before Yield -->
