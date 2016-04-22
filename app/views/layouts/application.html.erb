@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple CMS APP</title>
+  <%#= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%#= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag('public') %>
+  <%= csrf_meta_tags %> <!-- for CSRF prevention-->
+</head>
+<body>
+	<div id="header">
+		<h1>Simple CMS APP</h1>
+	</div>
+	<div id="main">
+		<div id="content">
+			<!-- Before Yield -->
+			<%= yield %>
+			<!-- After Yield -->
+		</div>
+	</div>
+	<div id="footer">
+		<p id="copyright">&copy; jungyasu.com / Yasu Jung</p>
+	</div>
+
+
+
+
+</body>
+</html>

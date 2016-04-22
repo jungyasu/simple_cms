@@ -1,0 +1,16 @@
+<!-- <h1>Subjects#edit</h1>
+<p>Find me in app/views/subjects/edit.html.erb</p>
+ -->
+ <%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="subjects edit">
+	<h2>Update/Edit Subject</h2>
+
+	<%= form_for(:subject, :url => {:action => 'update', :id => @subject.id}) do |f| %>
+	<%= render(:partial => "form", :locals => {:f => f}) %>
+
+	<div class="form-buttons">
+		<%= submit_tag("Update/Edit Subject") %>
+	</div>
+	<% end %>
+</div>
