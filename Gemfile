@@ -8,7 +8,7 @@ gem 'mysql2', '>= 0.3.13', '< 0.5'
 gem 'pg'
 #section
 gem 'acts_as_list', '~> 0.7.4'
-gem 'mysqltopostgres'
+# gem 'mysqltopostgres'
 
 #gem 'sass'
 gem 'font-awesome-rails'
