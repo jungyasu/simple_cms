@@ -1,12 +1,14 @@
+
+
 /* Structure */
-#content{
+/*#content{
 	padding-left: 100px;
 	padding-right: 100px;
 }
 #content h2{
 	width:100%;
 	text-align: center;
-}
+}*/
 .login form {
 	margin: 100px 250px;
 }
@@ -15,7 +17,6 @@
 }
 .menu ul {
 	margin: 3em 250px;
-	/*list-style;*/
 }
 .menu ul li {
 	margin-bottom:1em;

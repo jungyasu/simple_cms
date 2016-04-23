@@ -1,4 +1,6 @@
-html{
+
+
+/*html{
 	height: 100%;
 	width: 100%;	
 }
@@ -36,10 +38,10 @@ a:hover {
 }
 .center {
 	text-align: center;
-}
+}*/
 
 /* Structure */
-#header{
+/*#header{
 	heigth: 4em;
 	padding-top: 1em;
 	text-align: center;
@@ -73,10 +75,10 @@ a:hover {
 #footer p {
 	margin:0;
 	padding: 0.5em 1em;
-}
+}*/
 
 /* Naviation */
-#navigation ul {
+/*#navigation ul {
 	list-style: none;
 	margin: 0;
 	padding:0;
@@ -95,8 +97,9 @@ a:hover {
 #navigation a:hover {
 	background: #f2dc87;
 }
-
+*/
 /* Content */
-#content h2 {
+/*#content h2 {
 	color: #4c2516;
 }
+*/

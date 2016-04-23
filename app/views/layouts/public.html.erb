@@ -7,29 +7,29 @@
   <%#= csrf_meta_tags %>
   <%= stylesheet_link_tag('application', :media => 'all') %>
   <!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
 </head>
-<body>
-	<%= render 'layouts/mainnavi' %>
-	<div id="header">
-		<h1>Simple CMS</h1>
-		<%= link_to("Go to Admin", {:controller => 'access', :action => 'index'}, :style => 'color:#fff' ) %>
-	</div>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+	<%#= render 'layouts/mainnavi' %>
+	<!-- <div id="header"> -->
+		<!-- <h1>Simple CMS</h1> -->
+		<%#= link_to("Go to Admin", {:controller => 'access', :action => 'index'}, :style => 'color:#fff' ) %>
+	<!-- </div> -->
 
-	<div id="main">
-		<div id="navigation">
-			<p><%= render(:partial => 'layouts/navigation', :locals => {:subjects => @subjects}) %></p>
+	<div>
+		<div id="main">
+			<%= render(:partial => 'layouts/navigation', :locals => {:subjects => @subjects}) %>
+			<div id="content">
+				<!-- Before Yield -->
+				<%= yield %>
+				<!-- After Yield -->
+			</div>
+			<!-- To clear floating content -->
+			<div class="clear"></div>
 		</div>
-		<div id="content">
-			<!-- Before Yield -->
-			<%= yield %>
-			<!-- After Yield -->
+		<div id="footer">
+			<p id="copyright">&copy; jungyasu.com / Yasu Jung</p>
 		</div>
-		<!-- To clear floating content -->
-		<div class="clear"></div>
-	</div>
-	<div id="footer">
-		<p id="copyright">&copy; jungyasu.com / Yasu Jung</p>
 	</div>
 
 

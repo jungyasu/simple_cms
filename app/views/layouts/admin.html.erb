@@ -3,15 +3,18 @@
 <head>
   <title>Simple CMS | <%= @page_title || "ADMIN" %></title>
   <%#= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%#= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%#= csrf_meta_tags %>
   <%= stylesheet_link_tag('application', :media => 'all') %>
 </head>
 <body>
-	<div id="header">
-		<h1>Simple CMS Admin</h1>
-	</div>
+	<%#= render 'layouts/mainnavi' %>
+	<%= render(:partial => 'layouts/navigation', :locals => {:subjects => @subjects}) %>
 	<div id="main">
+		<div id="title">
+			<h1>Simple CMS Admin</h1>
+			<p><%= link_to("Back to Web", root_path) %></p>
+		</div>
 		<% if !flash[:notice].blank? %>
 			<div class="notice">
 				<%= flash[:notice] %>
