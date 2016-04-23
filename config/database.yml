@@ -12,14 +12,16 @@
 default: &default
   encoding: utf8
   pool: 5
-  username: simple_cms
-  password: abc123
+  # username: simple_cms
+  # password: abc123
+  username: postgres
+  password: 
   host: localhost
 
 development:
   <<: *default
-  adapter: mysql2
-  database: simple_cms_development
+  adapter: postgresql
+  database: simple_cms
   # socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -51,6 +53,6 @@ test:
 production:
   <<: *default
   database: # simple_cms_production
-  adapter: pg
-  username: simple_cms
+  adapter: postgresql
+  username: postgres
   password: <%= ENV['SIMPLE_CMS_DATABASE_PASSWORD'] %>
