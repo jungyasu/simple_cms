@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resources :categories
+  resources :posts
   # get 'public/index'
   # get 'public/show'
   # get 'admin_users/index'
