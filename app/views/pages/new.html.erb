@@ -1,0 +1,16 @@
+<!-- <h1>Pages#new</h1>
+<p>Find me in app/views/pages/new.html.erb</p> -->
+
+ <%= link_to("<< Back to List", {:action => 'index', :subject_id => @subject.id}, :class => 'back-link') %>
+
+<div class="pages new">
+	<h2>Create New Page</h2>
+	<%#= button_to "Add Default Permalink", :action => "add_default_permalink" %>
+	<%= form_for(:page, :url => {:action => 'create', :subject_id => @subject.id}) do |f| %>
+	<%= render(:partial => "form", :locals => {:f => f}) %>
+
+	<div class="form-buttons">
+		<%= submit_tag("Create Page") %>
+	</div>
+	<% end %>
+</div>

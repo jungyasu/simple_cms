@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple CMS<%= " | #{@page_title}" if @page_title %></title>
+  <%#= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%#= csrf_meta_tags %>
+  <%= stylesheet_link_tag('application', :media => 'all') %>
+  <!-- Latest compiled and minified CSS -->
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+	<%#= render 'layouts/mainnavi' %>
+	<!-- <div id="header"> -->
+		<!-- <h1>Simple CMS</h1> -->
+		<%#= link_to("Go to Admin", {:controller => 'access', :action => 'index'}, :style => 'color:#fff' ) %>
+	<!-- </div> -->
+
+	<div>
+		<div id="main">
+			<%= render(:partial => 'layouts/navigation', :locals => {:subjects => @subjects}) %>
+			<div id="content">
+				<!-- Before Yield -->
+				<%= yield %>
+				<!-- After Yield -->
+			</div>
+			<!-- To clear floating content -->
+			<div class="clear"></div>
+		</div>
+		<div id="footer">
+			<p id="copyright">&copy; jungyasu.com / Yasu Jung</p>
+		</div>
+	</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+/*$navbar-default-bg: #88088A;*/
+
+@import "bootstrap-sprockets";
+/*@import "bootstrap-responsive";*/
+@import "bootstrap";
+
+body{
+	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.navbar{
+	margin-bottom:0;
+}
+/*
+
+*/
+
+#logo {
+	float:left;
+	/*font-size:1.7em;	*/
+	/*color: #fff;*/
+	/*text-transform: uppercase;*/
+	letter-spacing: 2px;
+	font-weight: bold;	
+}
+
+#logo:hover {
+	/*color: #fff;*/
+	text-decoration: none;
+}
+
+.center {
+	text-align: center;
+}
+
+#intro {
+	background-image: asset-url('big-head.png');
+	background-size: auto 66%;
+    background-position: center;
+    background-repeat: no-repeat;
+	/*min-height: 400px;*/
+	background-color: rgba(105,210,231,0.5);
+}
+
+
+/*html{
+	height: 100%;
+	width: 100%;	
+}
+body{
+	width: 100%;
+	min-width: 980px;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font: 14px Verdana;
+}*/
+p, td, ul, ol, li, dl, dt, dd {
+	/*font-family: Verdana;*/
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+img {
+	border: none;
+}
+table {
+	border-collapse: collapse;
+}
+table tr th, table tr td {
+	vertical-align: top;
+	text-align: left;
+	padding: 3px;
+}
+a, a:visited {
+	color: #333;
+}
+a:hover {
+
+}
+.clear {
+	clear: both;
+}
+.center {
+	text-align: center;
+}
+
+/* Structure */
+/*#header{
+	height: 4em;
+	padding-top: 1em;
+	text-align: center;
+	background: #993120;
+	color:#fff;
+}
+#header h1{
+	margin: 0;
+	padding: 0;
+}
+#main {
+	min-height: 500px;
+	background: #f2dc87;
+}
+#navigation {
+	float: left;
+	width: 180px;
+	min-height: 480px;
+	padding: 10px;
+}
+#content{
+	padding: 10px;
+}*/
+#footer {
+	clear: both;
+	height: 2.5em;
+	text-align: right;
+	background: #fff;
+	color: #333;
+}
+#footer p {
+	margin:0;
+	padding: 0.5em 1em;
+}
+
+/* Naviation */
+/*#navigation ul {
+	list-style: none;
+	margin: 0;
+	padding:0;
+}
+#navigation ul li {
+	margin-bottom: 0.5em;
+}
+#navigation ul ul {
+	margin: 0.5em 0 0 1em;
+	font-size:0.9em;
+}
+#navigation a {
+	text-decoration: none;
+	padding: 1px 3px;
+}
+#navigation a:hover {
+	background: #f2dc87;
+}*/
+
+/* Content */
+/*#content h2 {
+	color: #4c2516;
+}
+*/
+
+/*
+.navbar-nav>li>a:hover {
+    color: #333;
+    background-color: transparent;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  text-decoration: none;
+  color: #262626;
+  background-color: transparent;
+}
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+  background-color: transparent;
+  border-color: #337ab7;
+}*/
