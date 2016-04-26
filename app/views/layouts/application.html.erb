@@ -11,6 +11,11 @@
 	<div id="header">
 		<h1>Simple CMS APP</h1>
 	</div>
+	<% if !flash[:notice].blank? %>
+		<div class="notice">
+			<%= flash[:notice] %>
+		</div>
+	<% end %>
 	<div id="main">
 		<div id="content">
 			<!-- Before Yield -->

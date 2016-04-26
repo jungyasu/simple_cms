@@ -1,9 +1,11 @@
-<p id="notice"><%= notice %></p>
+<h1>Posts(Category): <%= @category.name %></h1>
 
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
+<% if @posts.each do |post| %>
+	<h3><%= link_to post.title, post %></h3>
+	<p><%= post.body %></p>
+<% end.empty? %>
+	<p>Sorry, there are no posts in this category</p>
+<% end %>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+
+<p><%= link_to "Back to Categories", categories_path %></p>

@@ -1,1 +1,9 @@
-<h1>Show Post</h1>
+<h3><%= @post.title %></h3>
+<small><%= @post.created_at.strftime("%b %d. %Y") %></small>
+<p><%= @post.body %></p>
+
+<p>Category: <%= link_to @post.category.name, category_path(:id => @post.category.id) %></p>
+<!-- <small>Category: <%#= @post.category.name %></small> -->
+<p><%= link_to "Back", posts_path %></p>
+
+<!-- <%#= link_to "Edit Post", edit_post_path %> | <%#= link_to "Delete Post", @post, :confirm => "Are you sure you want to delete this post?" , :method => :delete %> -->

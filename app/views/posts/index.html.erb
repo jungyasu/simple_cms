@@ -9,8 +9,16 @@
 <p>This is some text for our awesome new Ruby web</p>
 <hr> -->
 
-<% @post.each do |post| %>
-	<h3><%= post.title %></h3>
+<% if !flash[:notice].blank? %>
+	<div class="notice">
+		<%= flash[:notice] %>
+	</div>
+<% end %>
+
+<% @posts.each do |post| %>
+	<h3><%= link_to post.title, post %></h3>
 	<p><%= post.body %></p>
 	<hr>
 <% end %>
+
+<%= link_to "Add New Post", new_post_path %>
