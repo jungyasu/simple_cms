@@ -4,6 +4,7 @@
 
 <p>Category: <%= link_to @post.category.name, category_path(:id => @post.category.id) %></p>
 <!-- <small>Category: <%#= @post.category.name %></small> -->
-<p><%= link_to "Back", posts_path %></p>
+<!-- <p><%#= link_to "Back", posts_path %></p> -->
+<%= link_to("Back to Posts", {:controller => "posts", :action => 'index'}, :class => 'back-link') %>
 
 <!-- <%#= link_to "Edit Post", edit_post_path %> | <%#= link_to "Delete Post", @post, :confirm => "Are you sure you want to delete this post?" , :method => :delete %> -->

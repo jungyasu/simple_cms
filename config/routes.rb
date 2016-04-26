@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :categories
-  resources :posts
+  # resources :categories
+  # resources :posts
   # get 'public/index'
   # get 'public/show'
   # get 'admin_users/index'
@@ -25,15 +25,14 @@ Rails.application.routes.draw do
   # get 'subjects/new'
   # get 'subjects/edit'
   # get 'subjects/delete'
-
-
+  # resources :tags, only: [:index, :show]
 
   # root "demo#index"
   root "public#index"
   get 'show/:permalink', :to => "public#show"
   
   get 'admin', :to => "access#index"
-
+  
   # get 'demo/index'
   match ':controller(/:action(/:id))', :via => [:get, :post]
 

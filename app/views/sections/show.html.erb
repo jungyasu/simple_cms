@@ -40,4 +40,10 @@
 			<td><%= @section.updated_at %></td>
 		</tr>
 	</table>
+	<% @section.tags.any? %>
+     <% @section.tags.each do |tag| %>
+     <span class="label label-teal">
+        <%= link_to tag.name, tag_path(tag.name) %>
+     </span>  
+	<% end %>
 </div>

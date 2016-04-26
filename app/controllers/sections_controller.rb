@@ -6,7 +6,7 @@ class SectionsController < ApplicationController
   
   def index
     # @sections = Section.sorted
-    @sections = @page.sections.sorted
+      @sections = @page.sections.sorted
   end
 
   def show
@@ -62,7 +62,7 @@ class SectionsController < ApplicationController
 
   private
     def section_params
-      params.require(:section).permit(:page_id, :name, :position, :visible, :content_type, :content)
+      params.require(:section).permit(:page_id, :name, :position, :visible, :content_type, :content, :tag_list)
     end
 
     def find_page

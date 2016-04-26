@@ -10,6 +10,8 @@ gem 'pg'
 gem 'acts_as_list', '~> 0.7.4'
 # gem 'mysqltopostgres'
 
+gem 'acts-as-taggable-on'
+
 #gem 'sass'
 gem 'font-awesome-rails'
 # Use SCSS for stylesheets
@@ -34,6 +36,7 @@ gem 'turbolinks'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+ # gem 'bcrypt-ruby'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

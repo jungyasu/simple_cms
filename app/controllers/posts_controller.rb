@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-	layout 'public'
+	layout "admin"
 	def index
 		@posts = Post.all
 	end
@@ -18,7 +18,8 @@ class PostsController < ApplicationController
 		
 		if @post.save
 			flash[:notice] = "Your post has been created"
-			redirect_to posts_path
+			# redirect_to posts_path
+			 redirect_to(:action => 'index')
 		else
 			render "new"
 		end
@@ -33,7 +34,8 @@ class PostsController < ApplicationController
 		
 		if @post.update_attributes(user_params)
 			flash[:notice] = "Your post has been updated"
-			redirect_to post_path
+			# redirect_to post_path
+			redirect_to(:action => 'show')
 		else
 			render "edit"
 		end
@@ -45,7 +47,8 @@ class PostsController < ApplicationController
 		@post = Post.find(params[:id])
 		@post.destroy
 		flash[:notice] = "Your post has been destroyed"
-		redirect_to posts_path
+		# redirect_to posts_path
+		redirect_to(:action => 'index')
 	end
 
 	private
