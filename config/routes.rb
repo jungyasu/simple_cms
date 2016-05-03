@@ -25,11 +25,17 @@ Rails.application.routes.draw do
   # get 'subjects/delete'
   # resources :tags, only: [:index, :show]
 
+
+
   # root "demo#index"
   root "public#index"
+  # match '/auth/:provider/callback', to: 'sessions#create' 
+
+  
   get 'show/:permalink', :to => "public#show"
   
   get 'admin', :to => "access#index"
+
   
   # get 'demo/index'
   match ':controller(/:action(/:id))', :via => [:get, :post]

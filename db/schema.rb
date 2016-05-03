@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160426225423) do
+ActiveRecord::Schema.define(version: 20160419040929) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,9 +20,9 @@ ActiveRecord::Schema.define(version: 20160426225423) do
     t.string   "first_name",      limit: 25
     t.string   "last_name",       limit: 50
     t.string   "email",           limit: 100, default: "", null: false
+    t.string   "username",        limit: 25
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "username",        limit: 25
     t.string   "password_digest"
   end
 
@@ -47,11 +47,6 @@ ActiveRecord::Schema.define(version: 20160426225423) do
 
   add_index "pages", ["permalink"], name: "index_pages_on_permalink", using: :btree
   add_index "pages", ["subject_id"], name: "index_pages_on_subject_id", using: :btree
-
-  create_table "posts", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "section_edits", force: :cascade do |t|
     t.integer  "admin_user_id"
