@@ -1,3 +1,4 @@
+// Refer to 
 // jQuery to collapse the navbar on scroll
 function collapseNavbar() {
     if ($("#main-navi").offset().top > 50) {
@@ -18,7 +19,7 @@ $(function() {
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
+        }, 750, 'easeInOutExpo');
         event.preventDefault();
     });
 });
